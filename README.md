@@ -191,7 +191,7 @@ The methodology and experiments rely on:
 ## Clone the repository
 
 ```bash
-git clone https://github.com/your-username/MF-Score-Datasets.git
+git clone https://github.com/Matheuscp98/MF-Score.git
 cd MF-Score-Datasets
 ```
 
