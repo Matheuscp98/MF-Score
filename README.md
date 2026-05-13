@@ -124,9 +124,7 @@ All experiments were conducted using **stratified 5-fold cross-validation**.
   - [`wine_quality_white.csv`](data/wine_quality_white.csv)
 
 - 📁 [`scripts/`](scripts/)
-  - [`preprocessing/`](scripts/preprocessing/)
-  - [`validation/`](scripts/validation/)
-  - [`examples/`](scripts/examples/)
+  - [`MF_SCORE.py`](scripts/MF_SCORE.py)
 
 - 📄 [`.gitattributes`](.gitattributes)
 - 📄 [`.gitignore`](.gitignore)
