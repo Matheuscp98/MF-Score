@@ -1,113 +1,242 @@
 # 📊 MF-Score Datasets Repository
 
-## 📝 Description
+## 🧠 MF-Score: Model-Agnostic Feature Selection without Model Training
 
-This repository contains a curated collection of **30 classification datasets** used in the study.
+This repository contains a curated collection of **30 classification datasets** used to evaluate the proposed **MF-Score methodology**, a model-agnostic criterion for feature subset evaluation in Machine Learning classification problems.
 
-The datasets were selected to ensure **diversity in dimensionality, class structure, and sample size**, enabling a robust evaluation of the proposed **MF-Score methodology**.
+MF-Score quantifies **multivariate class separability prior to classifier training** by integrating classical **MANOVA statistics** into a single latent index through **Principal Component Factor Analysis (PCFA)**.
 
-The MF-Score is a **model-agnostic feature selection criterion** that quantifies **multivariate class separability** using statistics derived from **Multivariate Analysis of Variance (MANOVA)**, combined through **Principal Component Factor Analysis (PCFA)**.
+The methodology was designed to provide:
 
-These datasets were used to:
-
-- Evaluate **feature subset quality** before model training  
-- Analyze relationships between **MF-Score and predictive performance**  
-- Benchmark against traditional **Feature Selection (FS) methods**  
-- Validate robustness across **different Machine Learning models and domains**
-
-All datasets are provided in **`.csv` format** and are ready to be used for **Machine Learning, Feature Selection, and statistical analysis tasks**.
+- Efficient feature subset evaluation
+- Reduced computational cost
+- Classifier-independent analysis
+- Robust performance across heterogeneous datasets
 
 ---
 
-## 📚 Publications
+# 🚀 Overview
+
+The MF-Score framework combines:
+
+- **Multivariate Analysis of Variance (MANOVA)**
+- **Principal Component Factor Analysis (PCFA)**
+- **Design of Experiments (DOE)**
+
+to evaluate feature subsets **before model training**, enabling scalable and computationally efficient Feature Selection (FS).
+
+The methodology was validated across:
+
+- 📂 **30 datasets**
+- 🤖 **8 Machine Learning classifiers**
+- 📊 Multiple predictive metrics
+
+Experimental results demonstrated:
+
+- Strong alignment between **MF-Score and predictive performance**
+- Competitive classification performance
+- Lower computational cost compared to traditional FS methods
+- Robustness across different domains and model families
+
+---
+
+# ⚙️ Methodological Pipeline
+
+The MF-Score framework is composed of six sequential stages:
+
+1. Data preprocessing and standardization  
+2. Latent variable extraction using PCFA with Varimax rotation  
+3. Structured subset exploration using DOE  
+4. MANOVA-based multivariate separability analysis  
+5. MF-Score computation through latent-factor aggregation  
+6. Statistical and predictive validation  
+
+---
+
+# ✨ Main Characteristics
+
+- ✅ Model-agnostic
+- ✅ Multivariate
+- ✅ Computationally efficient
+- ✅ Pre-modeling feature evaluation
+- ✅ DOE-driven subset exploration
+- ✅ Scalable to high-dimensional datasets
+- ✅ Independent of downstream classifiers
+
+---
+
+# 🤖 Model Validation
+
+The predictive utility of the selected subsets was validated using:
+
+- Logistic Regression (LR)
+- Linear Discriminant Analysis (LDA)
+- K-Nearest Neighbors (KNN)
+- Support Vector Machine (SVM)
+- Decision Tree (DT)
+- Random Forest (RF)
+- Gradient Boosting (GB)
+- eXtreme Gradient Boosting (XGB)
+
+## Evaluation Metrics
+
+- Accuracy
+- Precision
+- F1-score
+- LogLoss
+
+All experiments were conducted using **stratified 5-fold cross-validation**.
+
+---
+
+# 📂 Repository Structure
+
+```text
+MF-Score-Datasets/
+│
+├── data/
+│   ├── acoustic_extinguisher_fire.csv
+│   ├── alzheimers_disease.csv
+│   ├── apple_quality.csv
+│   ├── brain_tumor.csv
+│   ├── breast_cancer_wisconsin.csv
+│   ├── cancer.csv
+│   ├── cardiovascular_disease.csv
+│   ├── date_fruit.csv
+│   ├── diabetes.csv
+│   ├── dry_bean.csv
+│   ├── fetal_health_classification.csv
+│   ├── glass_identification.csv
+│   ├── heart_failure_prediction.csv
+│   ├── image_segmentation.csv
+│   ├── ionosphere.csv
+│   ├── magic_gamma_telescope.csv
+│   ├── mice_protein_expression.csv
+│   ├── palm_fruit_vision_features.csv
+│   ├── pen_based_recognition_of_handwritten_digits.csv
+│   ├── pepper.csv
+│   ├── pistachio_image_features.csv
+│   ├── pumpkin_seeds.csv
+│   ├── raisin.csv
+│   ├── rice_msc.csv
+│   ├── sonar_mines_rocks.csv
+│   ├── tool_materials.csv
+│   ├── vehicle_silhouettes.csv
+│   ├── weather_classification.csv
+│   ├── wine_quality_red.csv
+│   └── wine_quality_white.csv
+│
+├── scripts/
+│   ├── preprocessing/
+│   ├── validation/
+│   └── examples/
+│
+├── .gitattributes
+├── .gitignore
+├── LICENSE
+└── README.md
+```
+
+---
+
+# 📚 Publications
 
 This repository is part of the research study:
 
--  *Manuscript currently under peer review*
+> *Manuscript currently under peer review*
 
 ---
 
-## 📂 Datasets
+# 📊 Datasets
 
-The repository includes the following datasets:
-
-- [**Acoustic Extinguisher Fire**](acoustic_extinguisher_fire.csv)  
-- [**Alzheimer Disease**](alzheimers_disease.csv)  
-- [**Apple Quality**](apple_quality.csv)  
-- [**Brain Tumor**](brain_tumor.csv)  
-- [**Breast Cancer Wisconsin**](breast_cancer_wisconsin.csv)  
-- [**Cancer**](cancer.csv)  
-- [**Cardiovascular Disease**](cardiovascular_disease.csv)  
-- [**Date Fruit**](date_fruit.csv)  
-- [**Diabetes**](diabetes.csv)  
-- [**Dry Bean**](dry_bean.csv)  
-- [**Fetal Health Classification**](fetal_health_classification.csv)  
-- [**Glass Identification**](glass_identification.csv)  
-- [**Heart Failure Prediction**](heart_failure_prediction.csv)  
-- [**Image Segmentation**](image_segmentation.csv)  
-- [**Ionosphere**](ionosphere.csv)  
-- [**MAGIC Gamma Telescope**](magic_gamma_telescope.csv)  
-- [**Mice Protein Expression**](mice_protein_expression.csv)  
-- [**Palm Fruit Vision Features**](palm_fruit_vision_features.csv)  
-- [**Pen-Based Recognition of Handwritten Digits**](pen_based_recognition_of_handwritten_digits.csv)  
-- [**Pepper**](pepper.csv)  
-- [**Pistachio Image Features**](pistachio_image_features.csv)  
-- [**Pumpkin Seeds**](pumpkin_seeds.csv)  
-- [**Raisin**](raisin.csv)  
-- [**Rice MSC**](rise_msc.csv)  
-- [**Sonar Mines vs Rocks**](sonar_mines_rocks.csv)  
-- [**Tool Materials**](tool_materials.csv)  
-- [**Vehicle Silhouettes**](vehicle_silhouettes.csv)  
-- [**Weather Classification**](weather_classification.csv)  
-- [**Wine Quality Red**](wine_quality_red.csv)  
-- [**Wine Quality White**](wine_quality_white.csv)  
-
----
-
-## 🛠️ How to Use
-
-1. **Clone or download** this repository to your local machine.  
-2. **Load** any dataset using your preferred programming language (e.g., Python, R).  
-3. Use the datasets for:
-   - Feature Selection (FS)
-   - Machine Learning (ML)
-   - Multivariate statistical analysis
-4. Apply your own preprocessing techniques or use them as input for the **MF-Score methodology**.  
-5. Combine these datasets with your ML pipelines for benchmarking and validation.
-
----
-
-## 📊 Dataset Characteristics
+The repository includes 30 heterogeneous classification datasets covering multiple domains and complexity levels.
 
 The datasets vary significantly in:
 
-- 📈 **Number of features:** from low-dimensional to high-dimensional (e.g., Rice MSC with 100+ features)  
-- 📊 **Number of instances:** from small samples to large-scale datasets (up to 75,000 instances)  
-- 🧩 **Number of classes:** binary and multiclass problems  
+- 📌 Number of features
+- 📌 Number of samples
+- 📌 Number of classes
+- 📌 Dimensionality complexity
 
-This diversity ensures:
+Examples include:
 
-- Robust evaluation of **Feature Selection methods**  
-- Generalization across **different ML models**  
-- Applicability in **real-world scenarios**
+- Small and low-dimensional datasets
+- Large-scale datasets with tens of thousands of instances
+- High-dimensional datasets with 100+ features
+
+This diversity enables robust benchmarking of:
+
+- Feature Selection methods
+- Machine Learning models
+- Multivariate statistical methodologies
+
+All datasets are available in `.csv` format inside the `/data` directory.
 
 ---
 
-## 📬 Contact
+# 🛠️ Main Libraries
+
+The methodology and experiments rely on:
+
+- `numpy`
+- `pandas`
+- `scipy`
+- `scikit-learn`
+- `statsmodels`
+- `factor_analyzer`
+- `pyDOE2`
+- `xgboost`
+- `matplotlib`
+
+---
+
+# ▶️ How to Use
+
+## Clone the repository
+
+```bash
+git clone https://github.com/your-username/MF-Score-Datasets.git
+cd MF-Score-Datasets
+```
+
+## Load datasets in Python
+
+```python
+import pandas as pd
+
+df = pd.read_csv("data/wine_quality_red.csv")
+
+print(df.head())
+```
+
+The datasets can be used for:
+
+- Feature Selection (FS)
+- Machine Learning (ML)
+- Statistical analysis
+- Benchmarking studies
+- Validation of multivariate methodologies
+
+---
+
+# 📬 Contact
 
 <a href="mailto:matheusc_pereira@hotmail.com">
   <img src="https://i.ibb.co/k6Ddn36k/email.png" alt="E-mail" height="60"/>
 </a>
+
 <a href="https://www.linkedin.com/in/matheuscostapereira/">
   <img src="https://i.ibb.co/Kx4rZxdr/linkedin.png" alt="LinkedIn" height="60"/>
 </a>
+
 <a href="https://scholar.google.com.br/citations?user=1iDBIzYAAAAJ&hl=en-us">
   <img src="https://i.ibb.co/SwsRKK1t/scholar.png" alt="Google Scholar" height="60"/>
 </a>
+
 <a href="https://lattes.cnpq.br/7025666927284220">
   <img src="https://i.ibb.co/1fMjS38j/lattes.png" alt="Lattes" height="60"/>
 </a>
 
 ---
 
-> _Feel free to open issues or PRs, or reach out for collaboration or questions!_
+> Feel free to open issues or pull requests, or contact me for collaborations and research discussions.
