@@ -31,7 +31,7 @@ The methodology was validated across:
 - 🤖 **8 Machine Learning classifiers**
 - 📊 Multiple predictive metrics
 
-Experimental results demonstrated:
+Experimental results indicated:
 
 - Strong alignment between **MF-Score and predictive performance**
 - Competitive classification performance
